@@ -1,0 +1,26 @@
+{
+  "name": "multi-sig-wallet",
+  "version": "1.0.0",
+  "description": "Smart contract which will allow the transaction only after the set approvers have approved",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skiran017/multi-sig-wallet.git"
+  },
+  "keywords": [],
+  "author": "skiran017",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skiran017/multi-sig-wallet/issues"
+  },
+  "homepage": "https://github.com/skiran017/multi-sig-wallet#readme",
+  "dependencies": {
+    "@openzeppelin/test-helpers": "^0.5.15"
+  }
+}
