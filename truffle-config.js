@@ -1,3 +1,13 @@
+require('babel-register');
+require('babel-polyfill');
+const provider = require('@truffle/hdwallet-provider');
+const fs = require('fs');
+const secrets = JSON.parse(
+  fs
+    .readFileSync('secrets.json')
+    .toString()
+    .trim()
+);
 /**
  * Use this file to configure your truffle project. It's seeded with some
  * common settings for different networks and features like migrations,
@@ -33,6 +43,10 @@ module.exports = {
    *
    * $ truffle test --network <network-name>
    */
+  // contracts_directory: './src/contracts/',
+
+  // contracts_build_directory: './src/truffle_abis/',
+  contracts_build_directory: './src/contracts',
 
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
@@ -57,6 +71,16 @@ module.exports = {
     // },
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
+    kovan: {
+      provider: () =>
+        new provider(
+          secrets.privateKeys,
+          'https://kovan.infura.io/v3/b00ef27e20a34dc79a60f6b1384ba600',
+          0,
+          3
+        ),
+      network_id: 42,
+    },
     // ropsten: {
     // provider: () => new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/YOUR-PROJECT-ID`),
     // network_id: 3,       // Ropsten's id
