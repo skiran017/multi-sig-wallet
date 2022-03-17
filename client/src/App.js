@@ -39,22 +39,24 @@ function App() {
     wallet.methods.approveTransfer(transferId).send({ from: accounts[0] });
   };
   if (!web3 || !accounts || !wallet) {
-    return <div>Loading....</div>;
+    return (
+      <Box bgImage="url('/bg.png')" bgPosition="center" bgRepeat="no-repeat">
+        <Flex justifyContent="center" alignItems="center" h="20vh">
+          <Heading color="whitesmoke">Multi Signature Wallet</Heading>
+        </Flex>
+
+        <Flex justifyContent="center" alignItems="center" h="80vh" w="100vw">
+          <Heading color="whitesmoke">
+            No Ethereum Wallet found. Please install Metamask!
+          </Heading>
+        </Flex>
+      </Box>
+    );
   }
   return (
     <Box bgImage="url('/bg.png')" bgPosition="center" bgRepeat="no-repeat">
       <Flex justifyContent="center" alignItems="center" h="20vh">
-        <Heading
-          color="whitesmoke"
-          // css={{
-          //   background:
-          //     'linear-gradient(120deg, #FF00C7 0%, #51003F 100%), linear-gradient(120deg, #0030AD 0%, #00071A 100%), linear-gradient(180deg, #000346 0%, #FF0000 100%), linear-gradient(60deg, #0029FF 0%, #AA0014 100%), radial-gradient(100% 165% at 100% 100%, #FF00A8 0%, #00FF47 100%), radial-gradient(100% 150% at 0% 0%, #FFF500 0%, #51D500 100%)',
-          //   backgroundBlendMode:
-          //     'overlay, color-dodge, overlay, overlay, difference, normal',
-          // }}
-        >
-          Multi Signature Wallet
-        </Heading>
+        <Heading color="whitesmoke">Multi Signature Wallet</Heading>
       </Flex>
 
       <Flex justifyContent="center" alignItems="center" h="80vh" w="100vw">
