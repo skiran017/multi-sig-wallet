@@ -49,7 +49,7 @@
   "sourceMap": "66:352:0:-:0;;;113:10;90:33;;;;;;;;;;;;;;;;;;;;66:352;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:352:0;;;;;;;",
   "deployedSourceMap": "66:352:0:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:352:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;127:36;;;:::i;:::-;;;;;;;;;;;;;;;;;;;90:33;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;313:103;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;313:103:0;;;;;;;;;;;;;;;;;:::i;:::-;;127:36;;;;:::o;90:33::-;;;;;;;;;;;;;:::o;313:103::-;225:5;;;;;;;;;;;211:19;;:10;:19;;;196:101;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;402:9:::1;375:24;:36;;;;313:103:::0;:::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract Migrations {\n  address public owner = msg.sender;\n  uint public last_completed_migration;\n\n  modifier restricted() {\n    require(\n      msg.sender == owner,\n      \"This function is restricted to the contract's owner\"\n    );\n    _;\n  }\n\n  function setCompleted(uint completed) public restricted {\n    last_completed_migration = completed;\n  }\n}\n",
-  "sourcePath": "/Users/dexter/kranthi/dapps/multisig-wallet/contracts/Migrations.sol",
+  "sourcePath": "D:\\Github\\multi-sig-wallet\\contracts\\Migrations.sol",
   "ast": {
     "absolutePath": "project:/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -933,18 +933,18 @@
     "42": {
       "events": {},
       "links": {},
-      "address": "0x49CDa1fbC87524ce14617308c39ac8e893397A8D",
-      "transactionHash": "0x05a6704206cee48f137271f6de4a68f58e2a22e26ed7174e32e6afec7e8b9f19"
+      "address": "0xe494aab3F42c6652f3c0Bb5ECd1Ebba5422E0994",
+      "transactionHash": "0x2d1f9dee8534d4f7688e44be695c2b8228cded95bc2eebf05f09b46789ee4645"
     },
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x85d7E3Bf201824499B0016C7990Bd2DA13819Ede",
-      "transactionHash": "0x8ea8728837328a5d6240b7f303d5b8cf4bdddd9e10fa4cffcbdac179309c8954"
+      "address": "0x7AF9D5150bE08D79D7f8F6010b023E659f50DD4e",
+      "transactionHash": "0x959e7d216784b23eb5a9daef403a2704e5a6aa413cccfd6d64d1edfabf61c4a4"
     }
   },
-  "schemaVersion": "3.4.4",
-  "updatedAt": "2022-01-22T17:24:14.973Z",
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-03-17T01:03:26.317Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

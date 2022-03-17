@@ -65,7 +65,7 @@ function App() {
           />
         </Flex>
         <Flex ml={12} direction="column">
-          <Heading>Approvers List</Heading>
+          <Heading color="whitesmoke">Approvers List</Heading>
           <Header approvers={approvers} quorum={quorum} />
           <NewTransfer createTransfer={createTransfer} />
         </Flex>
